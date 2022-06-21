@@ -11,5 +11,9 @@
   "license": "ISC",
   "devDependencies": {
     "sass": "^1.52.3"
+  },
+  "dependencies": {
+    "gsap": "^3.10.4",
+    "typewriter-effect": "^2.18.2"
   }
 }
