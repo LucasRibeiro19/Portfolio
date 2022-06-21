@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Helvetica;
+}
+
+body {
+  background-color: rgb(26, 26, 26);
+}
+body nav {
+  padding: 2em;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+body .nav-cta {
+  cursor: pointer;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+}
+body .nav-cta span {
+  display: block;
+  width: 28px;
+  height: 2px;
+  border-radius: 9999px;
+  background-color: #fff;
+  transition: all 0.4s ease-in-out;
+}
+body .nav-cta span:not(:last-child) {
+  margin-bottom: 7px;
+}
+body .nav-cta.active {
+  transition-delay: 0.8s;
+  transform: rotate(45deg);
+}
+body .nav-cta.active span:nth-child(1), body .nav-cta.active span:nth-child(3) {
+  transition-delay: 0.4s;
+}
+body .nav-cta.active span:nth-child(1) {
+  transform: translateY(9px);
+}
+body .nav-cta.active span:nth-child(2) {
+  width: 0;
+}
+body .nav-cta.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(90deg);
+}
+
+/*# sourceMappingURL=style.css.map */
