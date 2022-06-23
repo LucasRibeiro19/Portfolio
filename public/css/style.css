@@ -1,27 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan&display=swap");
 *, ::before, ::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", Helvetica;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "League Spartan", sans-serif;
+  color: #fff;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: rgb(26, 26, 26);
 }
-body nav {
-  padding: 2em;
+
+nav {
   width: 100%;
   display: flex;
   justify-content: end;
   align-items: center;
 }
-body .nav-cta {
+
+.nav-cta {
   cursor: pointer;
-  position: absolute;
+  position: sticky;
+  top: 2em;
+  right: 2em;
   transition: all 0.4s ease-in-out;
 }
-body .nav-cta span {
+.nav-cta span {
   display: block;
   width: 28px;
   height: 2px;
@@ -29,24 +39,110 @@ body .nav-cta span {
   background-color: #fff;
   transition: all 0.4s ease-in-out;
 }
-body .nav-cta span:not(:last-child) {
+.nav-cta span:not(:last-child) {
   margin-bottom: 7px;
 }
-body .nav-cta.active {
+
+.nav-cta.active {
   transition-delay: 0.8s;
   transform: rotate(45deg);
 }
-body .nav-cta.active span:nth-child(1), body .nav-cta.active span:nth-child(3) {
+.nav-cta.active span:nth-child(1), .nav-cta.active span:nth-child(3) {
   transition-delay: 0.4s;
 }
-body .nav-cta.active span:nth-child(1) {
+.nav-cta.active span:nth-child(1) {
   transform: translateY(9px);
 }
-body .nav-cta.active span:nth-child(2) {
+.nav-cta.active span:nth-child(2) {
   width: 0;
 }
-body .nav-cta.active span:nth-child(3) {
+.nav-cta.active span:nth-child(3) {
   transform: translateY(-9px) rotate(90deg);
+}
+
+#home {
+  height: 100vh;
+  width: 100%;
+  padding: 2em;
+}
+
+.title-container {
+  position: relative;
+  top: 20em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.title-container h1 {
+  color: #fff;
+  font-size: 3.3rem;
+}
+
+.social-networks {
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2em;
+}
+.social-networks a {
+  color: #fff;
+}
+
+.Typewriter__wrapper {
+  font-size: 2em;
+}
+
+.Typewriter__cursor {
+  color: #fff;
+  font-size: 2em;
+}
+
+.home-mouse-container {
+  position: absolute;
+  bottom: 2em;
+}
+.home-mouse-container .home-mouse {
+  width: 25px;
+  height: 50px;
+  border: 2px solid #F4F4F4;
+  border-radius: 20px;
+  display: flex;
+  cursor: pointer;
+}
+.home-mouse-container .home-mouse .home-mouse-wheel {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #F4F4F4;
+  border-radius: 50%;
+  margin: auto;
+  animation: home-move-wheel 1s linear infinite;
+}
+@keyframes home-move-wheel {
+  0% {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(1rem);
+  }
+}
+
+p {
+  position: relative;
+  top: 15em;
+  font-size: 1.6rem;
+  font-style: italic;
+  text-align: center;
+}
+
+#deux {
+  height: 100vh;
+  width: 100%;
+  background-color: #F4F4F4;
 }
 
 /*# sourceMappingURL=style.css.map */
