@@ -5,11 +5,11 @@ const accroche = document.querySelector("#accroche");
 
 
 new Typewriter(title,{
-    deleteSpeed: 20
+    // deleteSpeed: 20
 })
 .pauseFor(1000)
 .typeString('<span style="color:#2F2CBA;font-weight:bold">Front-End </span>')
-.typeString('<span style="color:#FFFF">Developer</span>')
+.typeString('<span style="color:#1a1a1a">Developer</span>')
 .start()
 
 gsap.from(github,{
