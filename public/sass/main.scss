@@ -21,16 +21,56 @@ body{
 }
 
 .menu-container{
-    display: none;
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     z-index: 1;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(315deg, #f8f9d2 0%, #e8dbfc 74%);
+    background-color: $secondary-color;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: .4s;
+
+
+    ul{
+        position: relative;
+
+        li{
+            position: relative;
+            list-style: none;
+           
+            a{
+                position: relative;
+                text-decoration: none;
+                font-size: 6rem;
+                text-transform: uppercase;
+                cursor: pointer;
+                background: #5D46CF;
+                background: #F4F4F4;
+                background: linear-gradient(to right, #F4F4F4 0%, #5D46CF 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+
+
+                &:hover{
+                    font-size: 6.1rem;
+                    transform: scale(2);
+                    background: radial-gradient(circle farthest-corner at center center, #5D46CF 0%, #CF9999 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+
+        }
+    }
 }
 
 .menu-container.active{
-    display: block;
+    transform: scale(1);
 }
 
 nav{
@@ -66,6 +106,10 @@ nav{
 .nav-cta.active{
     transition-delay: 0.8s;
     transform: rotate(45deg);
+
+    span{
+        background-color: $main-color;
+    }
 
     span:nth-child(1),span:nth-child(3){
         transition-delay: .4s;

@@ -10,7 +10,12 @@ const homeMouse = document.querySelector(".home-mouse-container");
 nav.addEventListener('click',()=>{
     nav.classList.toggle('active')
     menu.classList.toggle("active")
-})
+});
+
+menu.addEventListener('click', () => {
+    nav.classList.toggle('active')
+    menu.classList.toggle("active")
+});
 
 new Typewriter(title,{
     // deleteSpeed: 20
